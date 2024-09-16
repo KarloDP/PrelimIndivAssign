@@ -17,15 +17,34 @@ public class myGrowingArrayList {
     }
 
     public String[] getNewArray() {
-        return newArray;
-    }
-
-    public void setNewArray(String[] newArray) {
-        this.newArray = newArray;
+        return this.newArray;
     }
     
-    public void changeEntry(String data, int index){
+    public String getEntry(int index){
+        return this.newArray[index];
+    }
+
+    public void setNewArrayList(List<String> newList) {
+        int i = 0;
+        while(this.newArray.length > list.size()) {
+            i++;
+            this.newArray = new String[5 * i];
+        }
+        for (int j=0; j < this.newArray.length; j++){
+            this.newArray[j] = list.get(j);
+        }
+    }
+
+    public void setEntry(String data, int index){
         this.newArray[index] = data;
+    }
+    
+    public void addEntry(String data){
+        
+    }
+    
+    public void sort(){
+        Arrays.stream(this.newArray).sorted();
     }
 
     @Override
