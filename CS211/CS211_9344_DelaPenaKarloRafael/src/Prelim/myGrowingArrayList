@@ -1,6 +1,7 @@
 import java.util.*;
 import java.lang.*;
 public class myGrowingArrayList {
+    String[] newArray;
     List<String> list;
     public myGrowingArrayList(){}
 
