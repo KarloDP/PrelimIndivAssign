@@ -26,12 +26,12 @@ public class myGrowingArrayList {
 
     public void setNewArrayList(List<String> newList) {
         int i = 0;
-        while(this.newArray.length > list.size()) {
+        while(this.newArray.length > newList.size()) {
             i++;
             this.newArray = new String[5 * i];
         }
         for (int j=0; j < this.newArray.length; j++){
-            this.newArray[j] = list.get(j);
+            this.newArray[j] = newList.get(j);
         }
     }
 
