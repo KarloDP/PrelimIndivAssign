@@ -1,11 +1,10 @@
 import java.util.*;
 import java.lang.*;
 public class myGrowingArrayList {
-    String[] newArray = new String[5];
     List<String> list;
     public myGrowingArrayList(){}
 
-    public myGrowingArrayList(String newArray, List<String> list){
+    public myGrowingArrayList(List<String> list){
         int i = 0;
         while(this.newArray.length > list.size()) {
                 i++;
