@@ -1,0 +1,37 @@
+import java.util.*;
+import java.lang.*;
+public class myGrowingArrayList {
+    String[] newArray = new String[5];
+    List<String> list;
+    public myGrowingArrayList(){}
+
+    public myGrowingArrayList(String newArray, List<String> list){
+        int i = 0;
+        while(this.newArray.length > list.size()) {
+                i++;
+                this.newArray = new String[5 * i];
+        }
+        for (int j=0; j < this.newArray.length; j++){
+            this.newArray[j] = list.get(j);
+        }
+    }
+
+    public String[] getNewArray() {
+        return newArray;
+    }
+
+    public void setNewArray(String[] newArray) {
+        this.newArray = newArray;
+    }
+    
+    public void changeEntry(String data, int index){
+        this.newArray[index] = data;
+    }
+
+    @Override
+    public String toString() {
+        return "myGrowingArrayList{" +
+                "newArray='" + newArray + '\'' +
+                '}';
+    }
+}
